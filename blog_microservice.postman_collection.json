@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "1add5082-7017-4e60-ae13-fe3fc7852184",
+		"name": "blog_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{POSTS}}/posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{POSTS}}/posts",
+					"host": [
+						"{{POSTS}}"
+					],
+					"path": [
+						"posts"
+					]
+				},
+				"description": "Post microservice - used to get or post any posts"
+			},
+			"response": []
+		},
+		{
+			"name": "{{POSTS}}/posts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Second post\"\r\n}"
+				},
+				"url": {
+					"raw": "{{POSTS}}/posts",
+					"host": [
+						"{{POSTS}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{COMMENTS}}/posts/123/comments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{COMMENTS}}/posts/123/comments",
+					"host": [
+						"{{COMMENTS}}"
+					],
+					"path": [
+						"posts",
+						"123",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{COMMENTS}}/posts/123/comments",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"this is sond comment\"\r\n}"
+				},
+				"url": {
+					"raw": "{{COMMENTS}}/posts/123/comments",
+					"host": [
+						"{{COMMENTS}}"
+					],
+					"path": [
+						"posts",
+						"123",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
